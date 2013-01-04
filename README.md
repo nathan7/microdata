@@ -12,8 +12,7 @@ or
 
 ## API
 
-microdata(schema)
------------------
+### microdata(schema)
 find all the elements with the given itemtype, extracts their data and returns them in an array.
 example:
 ```javascript
@@ -39,8 +38,7 @@ example return value:
 }]
 ```
 
-microdata.extract(elem)
------------------------
+### microdata.extract(elem)
 extract all the microdata from an element. if multiple values are found for a property, it's turned into an array.
 
 ## License
