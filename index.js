@@ -1,4 +1,4 @@
-module.exports = microdata;
+module.exports = microdata
 var lookup = { meta   :'content'
              , audio  :'src'
              , embed  :'src'
