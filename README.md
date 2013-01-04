@@ -12,8 +12,10 @@ or
 
 ## API
 
-### microdata(schema)
+### microdata(schema, elem)
 find all the elements with the given itemtype, extracts their data and returns them in an array.
+if elem is given, it only looks within that element. 
+
 example:
 ```javascript
 microdata('http://data-vocabulary.org/Person')
