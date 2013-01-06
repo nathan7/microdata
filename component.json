@@ -5,9 +5,12 @@
   "version": "0.0.1",
   "keywords": ["microdata", "html5"],
   "dependencies": {},
+  
+  
+  
   "development": {
-    "component/assert": "*",
-    "component/underscore": "*"
+
+
   },
   "author": "Nathan Zadoks",
   "license": "MIT",
