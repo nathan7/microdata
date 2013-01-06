@@ -28,31 +28,30 @@ function extract(scope) {
     , elems = [].slice.call(scope.childNodes)
     , elem
     , key
-    , attr
-    , val
 
   obj._type = scope.getAttribute('itemtype')
 
   /*jshint boss:true*/
   while (elem = elems.shift()) {
     if (elem.nodeType == elem.TEXT_NODE) continue
-
-    if (key = elem.getAttribute('itemprop')) {
-      if (elem.getAttribute('itemscope') !== null) val = extract(elem)
-      else {
-        attr = lookup[elem.tagName.toLowerCase()] || lookup['*']
-        val = elem[attr] || elem.getAttribute(attr)
-      }
-
-      if (!Object.prototype.hasOwnProperty.call(obj, key)) obj[key] = val
-      else {
-        if (obj[key] instanceof Array) obj[key].push(val)
-        else obj[key] = [obj[key], val]
-      }
-    }
-
+    if (key = elem.getAttribute('itemprop')) add(obj, key, value(elem))
     if (elem.getAttribute('itemscope') === null) [].push.apply(elems, elem.children)
   }
 
   return obj
+}
+
+function add(obj, key, val) {
+  if (!Object.prototype.hasOwnProperty.call(obj, key)) obj[key] = val
+  else {
+    var prop = obj[key]
+    if (prop instanceof Array) prop.push(val)
+    else obj[key] = [prop, val]
+  }
+}
+
+function value(elem) {
+  if (elem.getAttribute('itemscope') !== null) return extract(elem)
+  var attr = lookup[elem.tagName.toLowerCase()] || lookup['*']
+  return elem[attr] || elem.getAttribute(attr)
 }
