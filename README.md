@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/nathan7/microdata.png?branch=master)](https://travis-ci.org/nathan7/microdata)
 # microdata
 
   a component for extracting HTML5 microdata in the browser
