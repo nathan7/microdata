@@ -34,7 +34,7 @@ function extract(scope) {
   while (elem = elems.shift()) {
     if (elem.nodeType == elem.TEXT_NODE) continue
     if (key = elem.getAttribute('itemprop')) add(obj, key, value(elem))
-    if (elem.getAttribute('itemscope') === null) [].push.apply(elems, elem.children)
+    if (elem.getAttribute('itemscope') === null) push(elems, elem.children)
   }
 
   return obj
@@ -56,4 +56,8 @@ function value(elem) {
   if (elem.getAttribute('itemscope') !== null) return extract(elem)
   var attr = lookup[elem.tagName.toLowerCase()] || lookup['*']
   return elem[attr] || elem.getAttribute(attr)
+}
+
+function push(target, addition) {
+  for(var i = 0, len = addition.length; i < len; i++) target.push(addition[i])
 }
