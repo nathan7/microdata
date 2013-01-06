@@ -16,7 +16,7 @@ var lookup = { meta   :'content'
 
 function microdata(itemtype, scope) {
   scope = scope || document.documentElement
-  var elems = scope.querySelectorAll('[itemscope][itemtype=' + JSON.stringify(itemtype) + ']')
+  var elems = scope.querySelectorAll('[itemscope][itemtype="' + itemtype + '"]')
     , elem
     , arr = []
   for (var i = 0, len = elems.length; i < len; i++) arr.push(extract(elems[i]))
