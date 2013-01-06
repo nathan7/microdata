@@ -17,6 +17,7 @@ var lookup = { meta   :'content'
 function microdata(itemtype, scope) {
   scope = scope || document.documentElement
   var elems = scope.querySelectorAll('[itemscope][itemtype=' + JSON.stringify(itemtype) + ']')
+    , elem
     , arr = []
   for (var i = 0, len = elems.length; i < len; i++) arr.push(extract(elems[i]))
   return arr
@@ -24,12 +25,10 @@ function microdata(itemtype, scope) {
 
 microdata.extract = extract
 function extract(scope) {
-  var obj = {}
+  var obj = { _type: scope.getAttribute('itemtype') }
     , elems = [].slice.call(scope.childNodes)
     , elem
     , key
-
-  obj._type = scope.getAttribute('itemtype')
 
   /*jshint boss:true*/
   while (elem = elems.shift()) {
@@ -42,12 +41,15 @@ function extract(scope) {
 }
 
 function add(obj, key, val) {
-  if (!Object.prototype.hasOwnProperty.call(obj, key)) obj[key] = val
-  else {
-    var prop = obj[key]
+  /*jshint eqnull:true*/
+  if (val == null) return
+
+  var prop = obj[key]
+  if (prop == null)
+    obj[key] = val
+  else
     if (prop instanceof Array) prop.push(val)
     else obj[key] = [prop, val]
-  }
 }
 
 function value(elem) {
