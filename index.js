@@ -1,5 +1,6 @@
 module.exports = microdata
-var lookup = { meta   :'content'
+var lookup = { '*'    :'textContent'
+             , meta   :'content'
              , audio  :'src'
              , embed  :'src'
              , iframe :'src'
@@ -11,7 +12,6 @@ var lookup = { meta   :'content'
              , link   :'href'
              , object :'data'
              , time   :'datetime'
-             , '*'    :'textContent'
              }
 
 function microdata(itemtype, scope) {
