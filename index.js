@@ -32,7 +32,7 @@ function extract(scope) {
   /*jshint boss:true*/
   while (elem = elems.shift()) {
     if (key = elem.getAttribute('itemprop')) add(obj, key, value(elem))
-    if (elem.getAttribute('itemscope') === null) push(elems, elem.children)
+    if (elem.getAttribute('itemscope') === null) prepend(elems, elem.children)
   }
 
   return obj
@@ -56,6 +56,6 @@ function value(elem) {
   return elem[attr] || elem.getAttribute(attr)
 }
 
-function push(target, addition) {
-  for(var i = 0, len = addition.length; i < len; i++) target.push(addition[i])
+function prepend(target, addition) {
+  [].unshift.apply(target, [].slice.call(addition))
 }
