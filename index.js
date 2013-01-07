@@ -25,13 +25,12 @@ function microdata(itemtype, scope) {
 microdata.extract = extract
 function extract(scope) {
   var obj = { _type: scope.getAttribute('itemtype') }
-    , elems = [].slice.call(scope.childNodes)
+    , elems = [].slice.call(scope.children)
     , elem
     , key
 
   /*jshint boss:true*/
   while (elem = elems.shift()) {
-    if (elem.nodeType == elem.TEXT_NODE) continue
     if (key = elem.getAttribute('itemprop')) add(obj, key, value(elem))
     if (elem.getAttribute('itemscope') === null) push(elems, elem.children)
   }
