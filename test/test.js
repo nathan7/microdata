@@ -25,4 +25,4 @@ it('should find Mark Pilgrim', function() {
                 }
      , url: ["http://diveintomark.org/", "http://www.google.com/profiles/pilgrim", "http://www.reddit.com/user/MarkPilgrim", "http://www.twitter.com/diveintomark"]
      }])
-});
+})
