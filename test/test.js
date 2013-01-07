@@ -15,7 +15,7 @@ it('should find Mark Pilgrim', function() {
      , photo: "http://diveintohtml5.info/examples/2000_05_mark.jpg"
      , name: "Mark Pilgrim"
      , title: "Developer advocate"
-     , affiliation: "Google, Inc."
+     , affiliation: ["Google, Inc.", "O'Reilly"]
      , address: [{ _type: "http://data-vocabulary.org/Address"
                  , "street-address": "P.O. Box 562"
                  , locality: "Anytown"
