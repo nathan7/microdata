@@ -3,6 +3,10 @@
 
   a component for extracting HTML5 microdata in the browser
 
+## Compatibility
+
+  microdata uses querySelectorAll.
+
 ## Installation
 
     $ component install nathan7/microdata
