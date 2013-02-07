@@ -2,7 +2,7 @@
   "name": "microdata",
   "repository": { "type": "git", "url": "git://github.com/nathan7/microdata.git" },
   "description": "a component for extracting HTML5 microdata in the browser",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "keywords": ["microdata", "html5"],
   "dependencies": {},
   "scripts": {
