@@ -4,7 +4,9 @@
   "description": "a component for extracting HTML5 microdata in the browser",
   "version": "1.0.0",
   "keywords": ["microdata", "html5"],
-  "dependencies": {},
+  "dependencies": {
+
+  },
   "scripts": {
     "test": "component build --dev && mocha-phantomjs test/test.html"
   },

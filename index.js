@@ -13,10 +13,13 @@ var lookup = { '*'    :'textContent'
              , object :'data'
              , time   :'datetime'
              }
+var query = function(q, el) { return (el || document).querySelectorAll(q) }
+try { query = require('query').all }
+catch(e) {}
 
 function microdata(itemtype, scope) {
   scope = scope || document.documentElement
-  var elems = scope.querySelectorAll('[itemscope][itemtype="' + itemtype + '"]')
+  var elems = query('[itemscope][itemtype="' + itemtype + '"]', scope)
     , arr = []
   for (var i = 0, len = elems.length; i < len; i++) arr.push(extract(elems[i]))
   return arr
