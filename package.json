@@ -8,11 +8,12 @@
     "query": "git://github.com/component/query"
   },
   "scripts": {
-    "test": "component build --dev --standalone microdata && mocha-phantomjs test/test.html"
+    "test": "component build --dev --standalone microdata && mocha-phantomjs test/test.html && browserify . -s microdata -o build/build.js && mocha-phantomjs test/test.html"
   },
   "devDependencies": {
     "component": "~0.11.0",
-    "mocha-phantomjs": "~1.1.2"
+    "mocha-phantomjs": "~1.1.2",
+    "browserify": ">=2.12.0 <3.0.0"
   },
   "author": "Nathan Zadoks",
   "license": "MIT",
