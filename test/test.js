@@ -1,14 +1,3 @@
-function _require(name, user) {
-  try {
-    return require(name)
-  }
-  catch(e) {
-    return require((user || 'component') + '-' + name)
-  }
-}
-
-var microdata = _require('microdata', 'nathan7')
-
 it('should find Mark Pilgrim', function() {
   expect(microdata('http://data-vocabulary.org/Person')).to.deep.equal(
     [{ _type: "http://data-vocabulary.org/Person"

@@ -8,7 +8,7 @@
     "query": "git://github.com/component/query"
   },
   "scripts": {
-    "test": "component build --dev && mocha-phantomjs test/test.html"
+    "test": "component build --dev --standalone microdata && mocha-phantomjs test/test.html"
   },
   "devDependencies": {
     "component": "~0.11.0",
