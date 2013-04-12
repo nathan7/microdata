@@ -13,9 +13,8 @@ var lookup = { '*'    :'textContent'
              , object :'data'
              , time   :'datetime'
              }
-var query = function(q, el) { return (el || document).querySelectorAll(q) }
-try { query = require('query').all }
-catch(e) {}
+
+var query = require('query').all
 
 function microdata(itemtype, scope) {
   scope = scope || document.documentElement

@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "keywords": ["microdata", "html5"],
   "dependencies": {
-
+    "query": "git://github.com/component/query"
   },
   "scripts": {
     "test": "component build --dev && mocha-phantomjs test/test.html"
