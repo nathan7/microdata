@@ -8,6 +8,7 @@
     "query": "git://github.com/component/query"
   },
   "scripts": {
+    "pretest": "component install",
     "test": "component build --dev --standalone microdata && mocha-phantomjs test/test.html && browserify . -s microdata -o build/build.js && mocha-phantomjs test/test.html"
   },
   "devDependencies": {
