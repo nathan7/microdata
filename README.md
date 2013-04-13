@@ -5,7 +5,9 @@
 
 ## Compatibility
 
-  microdata uses querySelectorAll.
+  microdata uses [component/query](https://github.com/component/query), a wrapper for selector engines.
+  If you don't plug a selector engine into it, it'll default to querySelector/querySelectorAll.
+  See the [caniuse page for querySelector/querySelectorAll](http://caniuse.com/#feat=queryselector) for more information.
 
 ## Installation
 
