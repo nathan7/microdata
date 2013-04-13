@@ -2,7 +2,7 @@
   "name": "microdata",
   "repo": "nathan7/microdata",
   "description": "a component for extracting HTML5 microdata in the browser",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "keywords": ["microdata", "html5"],
   "dependencies": {
     "component/query": "*"
