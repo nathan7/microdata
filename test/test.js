@@ -20,6 +20,6 @@ it('should find Mark Pilgrim', function() {
                  , "country-name": "USA"
                  }
                 ]
-     , url: ["http://diveintomark.org/", "http://www.google.com/profiles/pilgrim", "http://www.reddit.com/user/MarkPilgrim", "http://www.twitter.com/diveintomark"]
+     , url: ["http://www.google.com/profiles/pilgrim", "http://www.reddit.com/user/MarkPilgrim", "http://www.twitter.com/diveintomark"]
      }])
 })
