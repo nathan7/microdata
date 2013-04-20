@@ -17,6 +17,10 @@ or
 
     $ npm install microdata
 
+or
+
+  for those still in the Dark Ages, [a standalone version](https://component.jit.su/nathan7/microdata/download).
+
 ## API
 
 ### microdata(schema, elem)
