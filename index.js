@@ -14,7 +14,7 @@ var lookup = { '*'    :'textContent'
              , time   :'datetime'
              }
 
-var query = require('query').all
+var query = require('component-query').all
 
 function microdata(itemtype, scope) {
   scope = scope || document.documentElement
