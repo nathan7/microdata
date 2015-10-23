@@ -11,7 +11,7 @@
     "html5"
   ],
   "dependencies": {
-    "component-query": "git://github.com/component/query"
+    "component-query": "0.0.3"
   },
   "scripts": {
     "test": "browserify . -s microdata -o build/build.js && mocha-phantomjs test/test.html"
