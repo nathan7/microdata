@@ -22,6 +22,5 @@
   },
   "author": "Nathan Zadoks",
   "license": "MIT",
-  "main": "index.js",
-  "readmeFilename": "Readme.md"
+  "main": "index.js"
 }
