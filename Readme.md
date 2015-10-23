@@ -1,25 +1,17 @@
 [![Build Status](https://travis-ci.org/nathan7/microdata.png?branch=master)](https://travis-ci.org/nathan7/microdata)
 # microdata
 
-  a component for extracting HTML5 microdata in the browser
+  a module for extracting HTML5 microdata in the browser
 
 ## Compatibility
 
-  microdata uses [component/query](https://github.com/component/query), a wrapper for selector engines.
+  microdata uses [component-query](https://www.npmjs.com/package/component-query), a wrapper for selector engines.
   If you don't plug a selector engine into it, it'll default to querySelector/querySelectorAll.
   See the [caniuse page for querySelector/querySelectorAll](http://caniuse.com/#feat=queryselector) for more information.
 
 ## Installation
 
-    $ component install nathan7/microdata
-
-or
-
-    $ npm install microdata
-
-or
-
-  for those still in the Dark Ages, [a standalone version](https://component.jit.su/nathan7/microdata/download).
+    $ npm install --save microdata
 
 ## API
 
